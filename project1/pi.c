@@ -1,4 +1,4 @@
-/* Compute Pi with Leibnitz Series */
+/* Compute Pi with Leibniz Series */
 
 #include <stdio.h>
 #include <stdlib.h>
