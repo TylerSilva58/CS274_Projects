@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 void printstr(char *s) {
+    
     char *beg = s;
-
     while (*s != '\0') {
         putchar(*s);
         s++;
