@@ -2,14 +2,18 @@
 
 #include <stdio.h>
 
-void printstr(char *s)
-{
-    for (int i = 0; i < 2; i++) {
-        char *p = s;
-        while (*p != '\0') {
-            putchar(*p);
-            p++;
-        }
+void printstr(char *s) {
+    char *beg = s;
+
+    while (*s != '\0') {
+        putchar(*s);
+        s++;
+    }
+    s = beg;
+    int i = 0;
+    while (s[i] != '\0') {
+        putchar(s[i]);
+        i++;
     }
 }
 
