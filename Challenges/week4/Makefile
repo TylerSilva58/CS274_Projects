@@ -15,3 +15,10 @@ challenge4_4: challenge4_4.c
 
 challenge4_5: challenge4_5.c
 	gcc -Wall -o challenge4_5 challenge4_5.c
+
+challenge4_6: challenge4_6.c
+	gcc -Wall -o challenge4_6 challenge4_6.c
+
+challenge4_7: challenge4_7.c
+	gcc -Wall -o challenge4_7 challenge4_7.c
+	
