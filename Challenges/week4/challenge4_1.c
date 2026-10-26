@@ -7,7 +7,7 @@ struct vars {
     short s; 
     int i; 
     long l; 
-}; 
+};
 
 void print_sizes() { 
     printf("sizeof c = %zu\n", sizeof(((struct vars *)0) -> c )); 
