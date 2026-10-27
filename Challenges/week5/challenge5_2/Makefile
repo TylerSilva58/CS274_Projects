@@ -1,3 +1,7 @@
+.PHONY: all 
+.PHONY: clean
+
+
 mather.o: mather.c mather.h
 	gcc -Wall -o $@ -c $<
 
@@ -12,3 +16,4 @@ main: main.o mather.o boxer.o
 
 clean:
 	rm -f main.o mather.o boxer.o main
+	rm -f *.o main
