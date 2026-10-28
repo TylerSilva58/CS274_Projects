@@ -26,3 +26,9 @@ int add(int x, int y)
 }
 
 // Question 1: The function is already defined in the Include <stdio.h>.
+
+
+
+
+
+
