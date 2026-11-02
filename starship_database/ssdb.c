@@ -46,6 +46,21 @@ FILE *open_starship_file(void) {
     return starship_file;
 }
 
+void print_record(struct starship *s, int record_num) { 
+     FILE *starship_file = open_starship_file();
+        record_read(starship_file, record_num, s);
+        printf("Record %d:\n", record_num);
+        printf("\n");
+        printf("    Name:        %s\n", s->name);
+        printf("    Passengers:  %d\n", s->passengers);
+        printf("    Speed:       %f\n", s->speed);
+        printf("    Destination: %s\n", s->destination);
+        printf("\n");
+
+        fclose(starship_file); 
+        return;
+}
+
 int main(int argc, char *argv[]){ 
     if (argc < 2) { 
         printf("usage: ssdb r rec | w rec name passengers speed dest\n");
@@ -57,20 +72,9 @@ int main(int argc, char *argv[]){
             return 1;
         }
         int record_num = atoi(argv[2]);
-
+        print_record(&s, record_num);
         struct starship s;
-        FILE *starship_file = open_starship_file();
-        record_read(starship_file, record_num, &s);
-        printf("Record %d:\n", record_num);
-        printf("\n");
-        printf("    Name:        %s\n", s.name);
-        printf("    Passengers:  %d\n", s.passengers);
-        printf("    Speed:       %f\n", s.speed);
-        printf("    Destination: %s\n", s.destination);
-        printf("\n");
-
-        fclose(starship_file); 
-        return 0;
+       
 
     } else if (strcmp(argv[1], "w") == 0) {
         if (argc != 7) {
