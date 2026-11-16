@@ -1,6 +1,5 @@
 #ifndef CPU_H
 #define CPU_H
-
 #include <string>
 #include "stack.h"
 
@@ -14,8 +13,8 @@ enum Instruction {
     JNZ,
     PRT,
     END,
-    SWAP,   // extra credit
-    OVER    // extra credit
+    SWAP, 
+    OVER    
 };
 
 class CPU {
@@ -26,7 +25,7 @@ public:
 
     void load(const std::string &filename);
     void run();
-    void dump() const;   // debugging: print loaded memory
+    void dump() const; 
 
 private:
     int memory[MEMORY_SIZE];

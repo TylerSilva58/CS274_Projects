@@ -23,7 +23,7 @@ public:
 
     int peek() const {
         if (top_ == 0)
-            throw std::runtime_error("Peek on empty stack");
+            throw std::runtime_error("Peek empty stack");
         return data_[top_ - 1];
     }
 
