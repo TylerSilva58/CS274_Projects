@@ -22,7 +22,7 @@ class MyData {
             if(i < 0 || i >= sizeof(data)/sizeof(data[0])) { 
                 throw std::out_of_range("Index out of range");
             }
-            return data[i]; 
+            return data[i];
         }
 };
 
