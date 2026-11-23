@@ -55,7 +55,6 @@ int main(int argc, char *argv[]) {
     for (const Shape *s : shapes)
         if (nearlyEqual(s->circumference(), maxCirc)) std::cout << s->name() << '\n';
 
-    // Clean up.
     for (Shape *s : shapes) delete s;
 
     return 0;
