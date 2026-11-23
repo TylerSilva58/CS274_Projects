@@ -128,7 +128,7 @@ void CPU::run() {
             break;
 
         default:
-            throw std::runtime_error("Invalid instruction at address " +
+            throw std::runtime_error("Invalid instruction at address" +
                                      std::to_string(pc));
         }
     }
